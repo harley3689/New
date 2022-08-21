@@ -16,4 +16,15 @@ public class SalesManager {
         }
         return max;
     }
+
+    public int medium() {
+        int min = sales[0];
+        for (int sale : sales) {
+            if (sale < min) {
+                min = sale;
+            }
+        }
+        int medium = (min + max()) / 2;
+        return medium;
+    }
 }
