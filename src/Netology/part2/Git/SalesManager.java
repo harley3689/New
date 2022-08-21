@@ -1,15 +1,15 @@
 package Netology.part2.Git;
 
 public class SalesManager {
-    protected int[] sales;
+    protected long[] sales;
 
-    public SalesManager(int[] sales) {
+    public SalesManager(long[] sales) {
         this.sales = sales;
     }
 
-    public int max() {
-        int max = -1;
-        for (int sale : sales) {
+    public long max() {
+        long max = -1;
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
@@ -17,14 +17,14 @@ public class SalesManager {
         return max;
     }
 
-    public int medium() {
-        int min = sales[0];
-        for (int sale : sales) {
+    public long medium() {
+        long min = sales[0];
+        for (long sale : sales) {
             if (sale < min) {
                 min = sale;
             }
         }
-        int medium = (min + max()) / 2;
+        long medium = (min + max()) / 2;
         return medium;
     }
 }
