@@ -16,8 +16,16 @@ public class SalesManager {
         }
         return max;
     }
+    public long medium(){
+        long medium = 0;
+        for(int i = 0; i < sales.length; i++){
+            medium += sales[i];
+        }
 
-    public long medium() {
+
+        return medium/ sales.length;
+    }
+    /*public long medium() {
         long min = sales[0];
         for (long sale : sales) {
             if (sale < min) {
@@ -26,5 +34,5 @@ public class SalesManager {
         }
         long medium = (min + max()) / 2;
         return medium;
-    }
+    }*/
 }
