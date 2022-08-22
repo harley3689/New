@@ -16,23 +16,26 @@ public class SalesManager {
         }
         return max;
     }
-    public long medium(){
-        long medium = 0;
-        for(int i = 0; i < sales.length; i++){
-            medium += sales[i];
-        }
 
-
-        return medium/ sales.length;
-    }
-    /*public long medium() {
+    public long min() {
         long min = sales[0];
         for (long sale : sales) {
             if (sale < min) {
                 min = sale;
             }
         }
-        long medium = (min + max()) / 2;
-        return medium;
-    }*/
+        return min;
+    }
+
+    public long medium() {
+        long medium = 0;
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] != max()) {
+                if (sales[i] != min()) {
+                    medium += sales[i];
+                }
+            }
+        }
+        return medium / (sales.length - 2);
+    }
 }
