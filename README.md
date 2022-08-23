@@ -8,4 +8,4 @@
 * #### **В`SalesManager amount` указывается стоимость продажи.**
 * #### *Команда*`System.out.println("Maximum:" + amount.max() + "\nMinimum:" + amount.min() +"\nMedium:" + amount.medium());`
 * #### **Вызывает`SalesManager`и выводит максимальную, минимальную и среднюю стоимость продажи.** 
-  * #### **В классе`SalesManager` метод `max()`,`min()` и `medium()` производят расчеты стоимости продаж.**
+  * #### **В классе`SalesManager` методы `max()`,`min()` и `medium()` производят расчеты стоимости продаж.**
