@@ -28,14 +28,15 @@ public class SalesManager {
     }
 
     public long medium() {
-        long medium = 0;
+        long maxSale = max();
+        long minSale = min();
+        long medium;
+        long total = 0;
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] != max()) {
-                if (sales[i] != min()) {
-                    medium += sales[i];
-                }
-            }
+            total += sales[i];
         }
-        return medium / (sales.length - 2);
+        medium = (total - minSale - maxSale) / (sales.length - 2);
+        return medium;
     }
+
 }
